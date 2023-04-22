@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "phidatabase-7bf53": {
+      "hosting": {
+        "admin-fashion": [
+          "phidatabase-7bf53"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "phidatabase-7bf53"
+  }
+}

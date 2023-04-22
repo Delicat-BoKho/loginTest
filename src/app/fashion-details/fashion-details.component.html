@@ -1,0 +1,31 @@
+<p>fashion-details works!</p>
+<p>{{errMessage}}</p>
+<table>
+<tr>
+<td>Fashion Style:</td>
+<td>
+  {{fashion.style}}
+  </td>
+  </tr>
+  <tr>
+  <td>Fashion Subject:</td>
+  <td>
+  {{fashion.fashion_subject}}
+  </td>
+  </tr>
+  <tr>
+  <td>Fashion Detail:</td>
+  <td [innerHTML]="fashion.fashion_detail"> </td>
+  </tr>
+  <tr>
+  <td>Fashion Image:</td>
+  <td>
+    <img src="{{fashion.fashion_image}}" width="100px" height="100px">
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2">
+  <button routerLink="/fashion">Return</button>
+  </td>
+  </tr>
+  </table>

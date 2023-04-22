@@ -1,0 +1,37 @@
+<button routerLink="/fashionCreate" >Create New</button>
+<button routerLink="/fileupload" >FileUpload</button>
+
+{{errMessage}}
+<table border="1">
+<tr>
+<td>Id</td>
+<td>Fashion Subject</td>
+<td>Fashion Detail</td>
+<td>Style</td>
+<td>Image</td>
+<td>Date Create</td>
+</tr>
+<tbody>
+<tr *ngFor=
+"let fashion of fashions">
+<td>{{fashion._id}}</td>
+<td>{{fashion.fashion_subject}}</td>
+<td [innerHTML]="fashion.fashion_detail"> </td>
+<td>{{fashion.style}} </td>
+
+<td>
+<img src="{{fashion.fashion_image}}" width="100px" height="100px">
+</td>
+<td>
+  {{fashion.date_create}}
+</td>
+<td>
+  <a href="" routerLink="/fashionEdit/{{fashion._id}}" >Edit </a> |
+  <a href="" routerLink="/fashionDetails/{{fashion._id}}">Details</a>|
+  <a href="" routerLink="/fashion" (click)="clickMethod(fashion._id)">Delete</a>
+</td>
+</tr>
+</tbody>
+</table>
+
+<router-outlet></router-outlet>
